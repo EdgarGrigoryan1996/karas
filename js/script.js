@@ -10,7 +10,7 @@ function changeLanguage(){
 
     document.documentElement.lang = lang;
     const script = document.createElement('script');
-    script.type = "module"
+    // script.type = "module"
     script.src = 'lang/' + lang + '.js';
     document.head.appendChild(script);
 

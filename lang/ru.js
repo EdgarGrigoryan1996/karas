@@ -1,4 +1,17 @@
-const titlesText = ["Закуски","Салаты","Гарниры","Шашлык, приготовленные в специальной дровяной печи \"Карас\"","Горячие блюда","Супы","Блюда, приготовленные в дровяной печи"," Сэндвичи/бургеры ","Десерты","Чай/кофе"]
+const titlesText = [
+    "МЕНЮ",
+    "Закуски",
+    "Салаты",
+    "Гарниры",
+    "Шашлык, приготовленные в специальной дровяной печи \"Карас\"",
+    "Горячие блюда",
+    "Супы",
+    "Блюда, приготовленные в дровяной печи",
+    "Сэндвичи / бургеры ",
+    "Десерты",
+    "Чай/кофе"
+]
+
 const texts = {
     appetizers:[
         {
@@ -27,14 +40,14 @@ const texts = {
             price:"12.50"
         },
         {
-            title:"Палочки из моцареллы",
+            title:"Хлеб",
             description:"",
-            price:"14.90"
+            price:"3.90"
         },
         {
-            title:"Перец халапеньо, фаршированный чеддером",
+            title:"Аджика",
             description:"",
-            price:"12.90"
+            price:"7.90"
         },
         {
             title:"Хумус",
@@ -47,15 +60,15 @@ const texts = {
             price:"7.90"
         },
         {
-            title:"Аджика",
+            title:"Палочки из моцареллы",
             description:"",
-            price:"7.90"
+            price:"14.90"
         },
         {
-            title:"Хлеб",
+            title:"Перец халапеньо, фаршированный чеддером",
             description:"",
-            price:"3.90"
-        }
+            price:"12.90"
+        },
     ],
     salads:[
         {
@@ -69,6 +82,11 @@ const texts = {
             price:"13.90"
         },
         {
+            title:"Салат \"Оливье\"",
+            description:"нарезанный картофель, морковь, соленые огурцы, вареные яйца, душистый горошек, лук, зелень, заправленная майонезом, солью и перцем",
+            price:"15.50"
+        },
+        {
             title:"*Cалат \"Цезарь\"" + "/ с курицей",
             description:"Гренки, сыр пармезан, домашняя заправка",
             price:"13.90/17.90"
@@ -79,20 +97,15 @@ const texts = {
             price:"15.90"
         },
         {
-            title:"Салат из брюссельской капусты",
-            description:"Бекон, миндаль, сыр пармезан, бальзамическая глазурь",
-            price:"14.90"
-        },
-        {
             title:"Салат \"Цезарь\" с лососем",
             description:"Салат, помидоры черри, тертый пармезан, маслины, коралловый тюль, лосось ",
             price:"21.50"
         },
         {
-            title:"Салат \"Оливье\"",
-            description:"нарезанный картофель, морковь, соленые огурцы, вареные яйца, душистый горошек, лук, зелень, заправленная майонезом, солью и перцем",
-            price:"15.50"
-        }
+            title:"Салат из брюссельской капусты",
+            description:"Бекон, миндаль, сыр пармезан, бальзамическая глазурь",
+            price:"14.90"
+        },
     ],
     sides:[
         {
@@ -101,22 +114,22 @@ const texts = {
             price:"6.50"
         },
         {
-            title:"Картофель фри с пармезаном и трюфелем",
-            description:"",
-            price:"13.90"
-        },
-        {
             title:"Белый рис",
             description:"",
             price:"5.80"
         },
         {
-            title:"Картофельное пюре",
+            title:"Картофель фри с пармезаном и трюфелем",
+            description:"",
+            price:"13.90"
+        },
+        {
+            title:"Картофель на огне",
             description:"",
             price:"6.20"
         },
         {
-            title:"Картофель на огне",
+            title:"Картофельное пюре",
             description:"",
             price:"6.20"
         },
@@ -125,7 +138,8 @@ const texts = {
             description:"Cыры пармезан и чеддер",
             price:"10.50"
         }
-    ],bbq:[
+    ],
+    bbq:[
         {
             title:"* Семейнoe комбо #1",
             description:"Свиные ребрышки, бараньи отбивные, шашлык из говядины и курицы, говяжий и куриный кебаб, перец и картофель на гриле, белый рис, хумус, аджика, дополнительный салат ",
@@ -162,14 +176,19 @@ const texts = {
             price:"19.50"
         },
         {
+            title:"* Рап с шашлыком из свинины (икибир)",
+            description:"",
+            price:"14.40"
+        },
+        {
             title:"* Куриный кебаб",
             description:"Перец на гриле, белый рис, дополнительный салат",
             price:"18.40"
         },
         {
-            title:"* Рап с шашлыком из свинины (икибир)",
+            title:"*+Бараньи отбивные",
             description:"",
-            price:"14.40"
+            price:"25.50"
         },
         {
             title:"*+Свиные ребрышки",
@@ -177,24 +196,19 @@ const texts = {
             price:"21.90"
         },
         {
-            title:"*+Бараньи отбивные",
-            description:"",
-            price:"25.90"
-        },
-        {
             title:"*+Шашлык из говядины",
             description:"",
             price:"23.50"
         },
         {
-            title:"*+Шашлык из грудки курицы",
-            description:"",
-            price:"15.50"
-        },
-        {
             title:"*+Говяжий кебаб",
             description:"",
             price:"12.30"
+        },
+        {
+            title:"*+Шашлык из грудки курицы",
+            description:"",
+            price:"15.50"
         },
         {
             title:"*+Куриный кебаб",
@@ -269,14 +283,14 @@ const texts = {
             price:"21.00"
         },
         {
-            title:"Пицца с сыром",
-            description:"Томатный соус, свежий сыр моцарелла, итальянский базилик",
-            price:"19.90"
-        },
-        {
             title:"Пицца \"Маргарита\" ",
             description:"Томатный соус, сыр моцарелла",
             price:"18.90"
+        },
+        {
+            title:"Пицца с сыром",
+            description:"Томатный соус, свежий сыр моцарелла, итальянский базилик",
+            price:"19.90"
         },
         {
             title:"Хачапури по-аджарски ",
@@ -308,14 +322,14 @@ const texts = {
     ],
     deserts:[
         {
-            title:"Крем-брюле",
-            description:"",
-            price:"8.50"
-        },
-        {
             title:"Пахлава",
             description:"",
             price:"11.50"
+        },
+        {
+            title:"Крем-брюле",
+            description:"",
+            price:"8.50"
         },
         {
             title:"Гата ",
@@ -324,6 +338,21 @@ const texts = {
         }
     ],
     tea:[
+        {
+            title:"Американский эспрессо",
+            description:"",
+            price:"3.90"
+        },
+        {
+            title:"Армянский кофе",
+            description:"",
+            price:"3.90"
+        },
+        {
+            title:"Лунго, капучино, латте маккиато",
+            description:"",
+            price:"4.50"
+        },
         {
             title:"Черный чай",
             description:"",
@@ -334,21 +363,6 @@ const texts = {
             description:"",
             price:"3.90"
         },
-        {
-            title:"Армянский кофе",
-            description:"",
-            price:"3.90"
-        },
-        {
-            title:"Американский эспрессо",
-            description:"",
-            price:"3.90"
-        },
-        {
-            title:"Лунго, капучино, латте маккиато",
-            description:"",
-            price:"4.50"
-        }
     ]
 }
 const footerText = ["** Уважаемый клиент, если у вас есть аллергия или другие диетические ограничения, сообщите об этом официанту.\n" +
@@ -359,9 +373,9 @@ const footerText = ["** Уважаемый клиент, если у вас ес
 "С уважением, команда \"Карас\"․"]
 function changeLanguage(category,languageData){
     for(let i = 0;i < category.length; i++){
-        category[i].children[0].innerHTML = texts[languageData][i].title
-        category[i].children[1].innerHTML = texts[languageData][i].description
-        category[i].children[2].innerHTML = texts[languageData][i].price
+        category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+        category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+        category[i].children[1].innerHTML = texts[languageData][i].price
     }
 }
 

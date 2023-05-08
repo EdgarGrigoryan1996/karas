@@ -1,4 +1,17 @@
-const titlesText = ["Appetizers","Salads","Sides","Karas Special Wood Fire BBQ","Entrees","Soups","Wood Stone Oven","Sandwiches/Burgers","Desserts","Tea/Coffee"]
+const titlesText = [
+    "MENU",
+    "Appetizers",
+    "Salads",
+    "Sides",
+    "Karas Special Wood Fire BBQ",
+    "Entrees",
+    "Soups",
+    "Wood Stone Oven",
+    "Sandwiches / Burgers",
+    "Desserts",
+    "Tea/Coffee"
+]
+
 const texts = {
     appetizers:[
         {
@@ -27,14 +40,14 @@ const texts = {
             price:"12.50"
         },
         {
-            title:"MOZZARELLA STICKS",
+            title:"BREAD",
             description:"",
-            price:"14.90"
+            price:"3.90"
         },
         {
-            title:"JALAPENO CHEDDAR BITES",
+            title:"AJIKA",
             description:"",
-            price:"12.90"
+            price:"7.90"
         },
         {
             title:"HUMMUS",
@@ -47,15 +60,15 @@ const texts = {
             price:"7.90"
         },
         {
-            title:"AJIKA",
+            title:"MOZZARELLA STICKS",
             description:"",
-            price:"7.90"
+            price:"14.90"
         },
         {
-            title:"BREAD",
+            title:"JALAPENO CHEDDAR BITES",
             description:"",
-            price:"3.90"
-        }
+            price:"12.90"
+        },
     ],
     salads:[
         {
@@ -69,6 +82,11 @@ const texts = {
             price:"13.90"
         },
         {
+            title:"OLIVYE SALAD",
+            description:"diced potatoes, carrots, pickles, boiled eggs, sweet peas, onions, herbs, and all tossed with a simple dressing with mayonnaise, salt, and pepper",
+            price:"15.50"
+        },
+        {
             title:"*CAESAR SALAD / with chicken",
             description:"Croutons, parmesan cheese, house dressing",
             price:"13.90/17.90"
@@ -79,20 +97,15 @@ const texts = {
             price:"15.90"
         },
         {
-            title:"BRUSSELS SPROUT SALAD",
-            description:"Bacon, almond, parmesan cheese, balsamic glaze",
-            price:"14.90"
-        },
-        {
             title:"*GRAVLAX CAESAR SALAD",
             description:"Romaine lettuce, cherry tomato, shaved parmesan, black olives, coral tuile, gravlax salmon",
             price:"21.50"
         },
         {
-            title:"OLIVYE SALAD",
-            description:"diced potatoes, carrots, pickles, boiled eggs, sweet peas, onions, herbs, and all tossed with a simple dressing with mayonnaise, salt, and pepper",
-            price:"15.50"
-        }
+            title:"BRUSSELS SPROUT SALAD",
+            description:"Bacon, almond, parmesan cheese, balsamic glaze",
+            price:"14.90"
+        },
     ],
     sides:[
         {
@@ -101,22 +114,22 @@ const texts = {
             price:"6.50"
         },
         {
-            title:"TRUFFLE PARMESAN FRIES",
-            description:"",
-            price:"13.90"
-        },
-        {
             title:"WHITE RICE",
             description:"",
             price:"5.80"
         },
         {
-            title:"MASHED POTATOES",
+            title:"TRUFFLE PARMESAN FRIES",
+            description:"",
+            price:"13.90"
+        },
+        {
+            title:"FIRE ROASTED POTATOES",
             description:"",
             price:"6.20"
         },
         {
-            title:"FIRE ROASTED POTATOES",
+            title:"MASHED POTATOES",
             description:"",
             price:"6.20"
         },
@@ -163,19 +176,14 @@ const texts = {
             price:"19.50"
         },
         {
-            title:"*CHICKEN LULA",
-            description:"Fire roasted pepper, rice, side salad",
-            price:"18.40"
-        },
-        {
             title:"*PORK (IQIBIR) KEBAB WRAP",
             description:"",
             price:"14.40"
         },
         {
-            title:"*+PORK RIBS ",
-            description:"",
-            price:"21.90"
+            title:"*CHICKEN LULA",
+            description:"Fire roasted pepper, rice, side salad",
+            price:"18.40"
         },
         {
             title:"*+LAMB CHOPS ",
@@ -183,19 +191,24 @@ const texts = {
             price:"25.50"
         },
         {
+            title:"*+PORK RIBS ",
+            description:"",
+            price:"21.90"
+        },
+        {
             title:"*+BEEF BBQ ",
             description:"",
             price:"23.50"
         },
         {
-            title:"*+CHICKEN BREAST ",
-            description:"",
-            price:"15.50"
-        },
-        {
             title:"*+BEEF LULA ",
             description:"",
             price:"12.30"
+        },
+        {
+            title:"*+CHICKEN BREAST ",
+            description:"",
+            price:"15.50"
         },
         {
             title:"*+CHICKEN LULA ",
@@ -269,14 +282,14 @@ const texts = {
             price:"21.00"
         },
         {
-            title:"CHEESE PIZZA ",
-            description:"Tomato sauce, fresh mozzarella, Italian basil",
-            price:"19.90"
-        },
-        {
             title:"MARGHERITA PIZZA ",
             description:"Tomato sauce, mozzarella",
             price:"18.90"
+        },
+        {
+            title:"CHEESE PIZZA ",
+            description:"Tomato sauce, fresh mozzarella, Italian basil",
+            price:"19.90"
         },
         {
             title:"*ADJARIAN KHACHAPURI",
@@ -308,14 +321,14 @@ const texts = {
     ],
     deserts:[
         {
-            title:"CRÈME BRULEE",
-            description:"",
-            price:"8.50"
-        },
-        {
             title:"BAKLAVA",
             description:"",
             price:"11.50"
+        },
+        {
+            title:"CRÈME BRULEE",
+            description:"",
+            price:"8.50"
         },
         {
             title:"GATA",
@@ -324,6 +337,21 @@ const texts = {
         }
     ],
     tea:[
+        {
+            title:"AMERICAN ESPRESSO",
+            description:"",
+            price:"3.90"
+        },
+        {
+            title:"ARMENIAN ESPRESSO",
+            description:"",
+            price:"3.90"
+        },
+        {
+            title:"LUNGO, CAPPUCCINO, LATTE MACCHIATO",
+            description:"",
+            price:"4.50"
+        },
         {
             title:"BLACK TEA",
             description:"",
@@ -334,21 +362,6 @@ const texts = {
             description:"",
             price:"3.90"
         },
-        {
-            title:"ARMENIAN ESPRESSO",
-            description:"",
-            price:"3.90"
-        },
-        {
-            title:"AMERICAN ESPRESSO",
-            description:"",
-            price:"3.90"
-        },
-        {
-            title:"LUNGO, CAPPUCCINO, LATTE MACCHIATO",
-            description:"",
-            price:"4.50"
-        }
     ]
 }
 const footerText = ["** Dear customer, if you have any allergies or dietary requirements, please let your server know.\n" +
@@ -357,9 +370,9 @@ const footerText = ["** Dear customer, if you have any allergies or dietary requ
 "Yours truly, Karas team."]
 function changeLanguage(category,languageData){
     for(let i = 0;i < category.length; i++){
-        category[i].children[0].innerHTML = texts[languageData][i].title
-        category[i].children[1].innerHTML = texts[languageData][i].description
-        category[i].children[2].innerHTML = texts[languageData][i].price
+        category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+        category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+        category[i].children[1].innerHTML = texts[languageData][i].price
     }
 }
 function changeTitleLanguage(titles){
@@ -370,7 +383,7 @@ function changeTitleLanguage(titles){
 
 function changeFooterLanguage(){
     const footer = document.querySelector("footer")
-    footer.children[0].innerHTML = footerText[0]
+    footer.children[0].children[0].innerHTML = footerText[0]
 }
 changeFooterLanguage()
 
