@@ -4,7 +4,6 @@ function changeLanguage(){
     const params = new URLSearchParams(window.location.search);
     let lang = params.get("lang") || "en";
     if(!languages.includes(lang)){
-        alert("test")
         lang = "en"
     }
 
