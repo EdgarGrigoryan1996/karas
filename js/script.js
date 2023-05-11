@@ -1,39 +1,54 @@
+const params = new URLSearchParams(window.location.search);
+let lang = params.get("lang") || "en";
+
 // Popup change language
+
 const popup = document.querySelector(".popup")
 const elems = document.querySelectorAll(".popup-lang")
+const showPopupButton = document.querySelector(".showPopupButton");
+const popupText = document.querySelector(".popup-text");
+
 for(let i = 0; i < elems.length; i++){
     elems[i].addEventListener("click", () => {
-        // const refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + `?lang=${elems[i].dataset.lang}`;
-        // window.history.pushState({ path: refresh }, '', refresh);
-        localStorage.setItem("lang",lang)
+
+        if(localStorage.getItem("lang")){
+            localStorage.removeItem("lang");
+        }
+
+         localStorage.setItem("lang",elems[i].dataset.lang)
+         localStorage.removeItem("popupShow")
          window.location = `index.html?lang=${elems[i].dataset.lang}`
     })
 }
-const showPopupButton = document.querySelector(".showPopupButton");
-showPopupButton.addEventListener("click", showPopup)
-function showPopup() {
+
+
+showPopupButton.addEventListener("click", () => {
+    popup.style.display = "block"
+    document.body.classList.add("stop-scrolling")
+    localStorage.setItem("popupShow","true")
     localStorage.removeItem("lang")
-    location.reload()
-}
+})
 
 // setShowButtonText
-const params = new URLSearchParams(window.location.search);
-let lang = params.get("lang") || "en";
+
+
 switch (lang) {
     case "en":
-        showPopupButton.innerText = "English";
+        showPopupButton.children[0].innerText = "English";
+        popupText.innerText = "Choose language"
         break;
     case "ru":
-        showPopupButton.innerText = "Русский";
+        showPopupButton.children[0].innerText = "Русский";
+        popupText.innerText = "Выберите язык"
         break;
     case "am":
-        showPopupButton.innerText = "Հայերեն";
+        showPopupButton.children[0].innerText = "Հայերեն";
+        popupText.innerText = "Ընտրեք լեզուն"
         break;
 }
-console.log(lang)
-
 
 // -------------
+
 function changeLanguage(){
     const languages = ["en","am","ru"]
     const params = new URLSearchParams(window.location.search);
@@ -44,24 +59,19 @@ function changeLanguage(){
 
     document.documentElement.lang = lang;
     const script = document.createElement('script');
-    // script.type = "module"
     script.src = 'lang/' + lang + '.js';
     document.head.appendChild(script);
 
 }
-const select = document.getElementById('language-select');
-console.log()
-function changeLanguageWithSelect() {
-    const lang = select.value;
-    window.location = `index.html?lang=${lang}`
-}
+
 
 
 changeLanguage()
 
-if(localStorage.getItem("lang")){
+if(localStorage.getItem("lang") || (params.get("lang") && !localStorage.getItem("popupShow"))){
     popup.style.display = "none"
 } else {
     popup.style.display = "block"
+    document.body.classList.add("stop-scrolling")
 }
 
