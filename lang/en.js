@@ -21,17 +21,12 @@ const texts = {
         },
         {
             title:"ARMENIAN CHEESE PLATE",
-            description:"Feta cheese and herbs",
+            description:"Feta Cheese And Herbs",
             price:"16.50"
         },
         {
-            title:"THREE DIP PLATE",
-            description:"Hummus, tzatziki, ajika",
-            price:"15.90"
-        },
-        {
             title:"PICKLED VEGETABLES",
-            description:"Seasonal vegetables",
+            description:"Seasonal Vegetables",
             price:"13.90"
         },
         {
@@ -43,6 +38,11 @@ const texts = {
             title:"BREAD",
             description:"",
             price:"3.90"
+        },
+        {
+            title:"THREE DIP PLATE",
+            description:"Hummus, Tzatziki, Ajika",
+            price:"15.90"
         },
         {
             title:"AJIKA",
@@ -191,14 +191,14 @@ const texts = {
             price:"25.50"
         },
         {
-            title:"*+PORK RIBS ",
-            description:"",
-            price:"21.90"
-        },
-        {
             title:"*+BEEF BBQ ",
             description:"",
             price:"23.50"
+        },
+        {
+            title:"*+PORK RIBS ",
+            description:"",
+            price:"21.90"
         },
         {
             title:"*+BEEF LULA ",
@@ -279,27 +279,27 @@ const texts = {
         {
             title:"PEPPERONI PIZZA",
             description:"Tomato sauce, mozzarella, pepperoni",
-            price:"21.00"
+            price:"21.50"
         },
         {
             title:"MARGHERITA PIZZA ",
             description:"Tomato sauce, mozzarella",
-            price:"18.90"
+            price:"20.90"
         },
         {
             title:"CHEESE PIZZA ",
             description:"Tomato sauce, fresh mozzarella, Italian basil",
-            price:"19.90"
+            price:"18.90"
         },
         {
             title:"*ADJARIAN KHACHAPURI",
             description:"Mozzarella, feta cheese, eggs",
-            price:"16.50"
+            price:"17.50"
         },
         {
             title:"SCHIACCIATA BREAD",
             description:"Garlic, olive oil, rosemary",
-            price:"each/9.95"
+            price:"each/9.90"
         },
         {
             title:"LAHMAJOUN",
