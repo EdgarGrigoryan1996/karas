@@ -4,6 +4,9 @@
     touch-action: none;
     -ms-touch-action: none;
 }
+.mr-2{
+    margin-right: 2px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -160,7 +163,12 @@ section{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.other-salads .category-block .dish:nth-child(4),
+.other-salads .category-block .dish:nth-child(5),
+.other-salads .category-block .dish:nth-child(6),
+.other-salads .category-block .dish:nth-child(7){
+    flex-basis: 32%;
+}
 .dish{
     margin: 25px 5px 0 5px;
     background: #fff;
@@ -198,6 +206,10 @@ section{
     font-size: 6px;
     padding-top: 1px;
     text-transform: uppercase;
+    white-space: break-spaces;
+}
+.small-dish-title{
+    font-size: 5px;
 }
 
 .dish-description{
@@ -208,9 +220,16 @@ section{
 }
 
 .dish-price{
+    display: flex;
+    justify-content: space-between;
     font-size: 6px;
     font-weight: 700;
     padding-top: 1px;
+    color:#231F20;
+}
+.withTitle{
+    font-size: 4px;
+    color:#231F20;
 }
 
 footer{
@@ -248,11 +267,18 @@ footer div img{
     .dish-title{
         font-size: 10px;
     }
+    .small-dish-title{
+        font-size: 8px;
+    }
     .dish-description{
         font-size: 8px;
     }
     .dish-price{
-        font-size: 12px;
+        font-size: 8px;
+    }
+    .withTitle{
+        font-size: 6px;
+        color:#231F20;
     }
 
     .dish-image-background img {
@@ -278,7 +304,11 @@ footer div img{
         font-size: 10px;
     }
     .dish-price{
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .withTitle{
+        font-size: 8px;
+        color:#231F20;
     }
     .dish{
         margin-top: 45px;
@@ -299,6 +329,12 @@ footer div img{
 @media screen and (min-width: 768px) {
     .dish{
         margin-top: 100px;
+    }
+    .other-salads .category-block .dish:nth-child(4),
+    .other-salads .category-block .dish:nth-child(5),
+    .other-salads .category-block .dish:nth-child(6),
+    .other-salads .category-block .dish:nth-child(7){
+        flex-basis: 33%;
     }
 }
 @media screen and (min-width: 1024px ){
@@ -332,6 +368,13 @@ footer div img{
         height: unset;
     }
 
+    .other-salads .category-block .dish:nth-child(4),
+    .other-salads .category-block .dish:nth-child(5),
+    .other-salads .category-block .dish:nth-child(6),
+    .other-salads .category-block .dish:nth-child(7){
+        flex-basis: 32%;
+    }
+
     .dish{
         margin: 110px 10px 0 10px;
         width: calc(30% - 20px);
@@ -355,6 +398,10 @@ footer div img{
     .dish-price{
         font-size: 18px;
         padding: 3px;
+    }
+    .withTitle{
+        font-size: 13px;
+        color:#231F20;
     }
     .dish-image-background {
         height: 205px;

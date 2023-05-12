@@ -15,7 +15,7 @@ const titlesText = [
 const texts = {
     appetizers:[
         {
-            title:"Блинчики с говядиной (2 шт.)",
+            title:"Блинчики с говядиной"  + `<span><span class='mr-2'> (2</span>шт) </span>`,
             description:"",
             price:"12.90"
         },
@@ -83,13 +83,15 @@ const texts = {
         },
         {
             title:"Салат \"Оливье\"",
-            description:"нарезанный картофель, морковь, соленые огурцы, вареные яйца, душистый горошек, лук, зелень, заправленная майонезом, солью и перцем",
+            description:"Нарезанный картофель, морковь, соленые огурцы, вареные яйца, душистый горошек, лук, зелень, заправленная майонезом, солью и перцем",
             price:"15.50"
         },
         {
-            title:"*Cалат \"Цезарь\"" + "/ с курицей",
+            title:"*Cалат \"Цезарь\"",
             description:"Гренки, сыр пармезан, домашняя заправка",
-            price:"13.90/17.90"
+            price:"13.90",
+            withTitle:"/с курицей/",
+            extraPrice:"17.90"
         },
         {
             title:"Греческий салат",
@@ -300,12 +302,14 @@ const texts = {
         {
             title:"Хлеб cкьяччата",
             description:"Чеснок, оливковое масло, розмарин",
-            price:"each/9.90"
+            price:"9.90",
+            each:"Каждий/"
         },
         {
             title:"Лахмаджо",
             description:"",
-            price:"each/4.20"
+            price:"4.20",
+            each:"Каждий/"
         }
     ],
     sandwiches:[
@@ -373,9 +377,19 @@ const footerText = ["** Уважаемый клиент, если у вас ес
 "С уважением, команда \"Карас\"․"]
 function changeLanguage(category,languageData){
     for(let i = 0;i < category.length; i++){
-        category[i].children[0].children[0].innerHTML = texts[languageData][i].title
-        category[i].children[0].children[1].innerHTML = texts[languageData][i].description
-        category[i].children[1].innerHTML = texts[languageData][i].price
+        if(texts[languageData][i].hasOwnProperty("extraPrice")){
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = `<div>${texts[languageData][i].price}</div><div><span class="withTitle">${texts[languageData][i].withTitle}</span><span>${texts[languageData][i].extraPrice}</span></div>`
+        } else if(texts[languageData][i].hasOwnProperty("each")){
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = `<div><span class="withTitle">${texts[languageData][i].each}</span><span>${texts[languageData][i].price}</span></div>`
+        } else {
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = texts[languageData][i].price
+        }
     }
 }
 

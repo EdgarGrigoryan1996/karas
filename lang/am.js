@@ -15,7 +15,7 @@ const titlesText = [
 const texts = {
     appetizers:[
         {
-            title:"Նրբաբլիթ տավարի մսով (2 հատ)",
+            title:"Նրբաբլիթ տավարի մսով" + `<span><span class='mr-2'> (2</span>հատ) </span>`,
             description:"",
             price:"12.90"
         },
@@ -83,13 +83,15 @@ const texts = {
         },
         {
             title:"Աղցան Օլիվյե ",
-            description:"կտրատած կարտոֆիլ, գազար, թթու վարունգ, խաշած ձու, քաղցր ոլոռ, սոխ, կանաչի՝ համեմված մայոնեզով, աղով և պղպեղով",
+            description:"Կտրատած կարտոֆիլ, գազար, թթու վարունգ, խաշած ձու, քաղցր ոլոռ, սոխ, կանաչի՝ համեմված մայոնեզով, աղով և պղպեղով",
             price:"15.50"
         },
         {
-            title:"Կեսար աղցան ",
+            title:"Կեսար աղցան",
             description:"Չորահաց, Պարմեզան պանիր, հազար, սոուս",
-            price:"13.90/17.90"
+            price:"13.90",
+            withTitle:"/հավով/",
+            extraPrice:"17.90"
         },
         {
             title:"Հունական աղցան",
@@ -299,12 +301,14 @@ const texts = {
         {
             title:"Հաց «Սկիաչատտա»",
             description:"Սխտոր, ձիթապտղի յուղ, ռոզմարին",
-            price:"each/9.90"
+            price:"9.90",
+            each:"Յուրաքանչյուրը/"
         },
         {
             title:"Լահմաջո",
             description:"",
-            price:"each/4.20"
+            price:"4.20",
+            each:"Յուրաքանչյուրը/"
         }
     ],
     sandwiches:[
@@ -373,9 +377,19 @@ const footerText = ["** Հարգելի՛ հաճախորդ, եթե ունեք ա�
 
 function changeLanguage(category,languageData){
     for(let i = 0;i < category.length; i++) {
-        category[i].children[0].children[0].innerHTML = texts[languageData][i].title
-        category[i].children[0].children[1].innerHTML = texts[languageData][i].description
-        category[i].children[1].innerHTML = texts[languageData][i].price
+        if(texts[languageData][i].hasOwnProperty("extraPrice")){
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = `<div>${texts[languageData][i].price}</div><div><span class="withTitle">${texts[languageData][i].withTitle}</span><span>${texts[languageData][i].extraPrice}</span></div>`
+        } else if(texts[languageData][i].hasOwnProperty("each")){
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = `<div><span class="withTitle">${texts[languageData][i].each}</span><span>${texts[languageData][i].price}</span></div>`
+        } else {
+            category[i].children[0].children[0].innerHTML = texts[languageData][i].title
+            category[i].children[0].children[1].innerHTML = texts[languageData][i].description
+            category[i].children[1].innerHTML = texts[languageData][i].price
+        }
     }
 }
 
