@@ -2,12 +2,12 @@ const titlesText = [
     "MENU",
     "Appetizers",
     "Salads",
-    "Sides",
     "Karas Special Wood Fire BBQ",
     "Entrees",
     "Soups",
     "Wood Stone Oven",
     "Sandwiches / Burgers",
+    "Sides",
     "Desserts",
     "Tea/Coffee"
 ]
@@ -178,14 +178,14 @@ const texts = {
             price:"19.50"
         },
         {
-            title:"*PORK (IQIBIR) KEBAB WRAP",
-            description:"",
-            price:"14.40"
-        },
-        {
             title:"*CHICKEN LULA",
             description:"Fire roasted pepper, rice, side salad",
             price:"18.40"
+        },
+        {
+            title:"*PORK (IQIBIR) KEBAB WRAP",
+            description:"",
+            price:"14.40"
         },
         {
             title:"*+LAMB CHOPS ",

@@ -64,8 +64,6 @@ function changeLanguage(){
 
 }
 
-
-
 changeLanguage()
 
 if(localStorage.getItem("lang") || (params.get("lang") && !localStorage.getItem("popupShow"))){
