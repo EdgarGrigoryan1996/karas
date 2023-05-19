@@ -148,7 +148,7 @@ const texts = {
             price:"139.00"
         },
         {
-            title:"*FAMILY COMBO # 2",
+            title:"*FAMILY COMBO #2",
             description:"Pork ribs, lamb chops, beef bbq, chicken bbq, fire roasted pepper, fire roasted potatoes, rice, hummus, ajika, side salad",
             price:"105.00"
         },
