@@ -37,9 +37,9 @@ switch (lang) {
         showPopupButton.children[0].innerText = "English";
         popupText.innerText = "Choose language"
         break;
-    case "ru":
-        showPopupButton.children[0].innerText = "Русский";
-        popupText.innerText = "Выберите язык"
+    case "es":
+        showPopupButton.children[0].innerText = "Español";
+        popupText.innerText = "Elige lengua"
         break;
     case "am":
         showPopupButton.children[0].innerText = "Հայերեն";
@@ -50,7 +50,7 @@ switch (lang) {
 // -------------
 
 function changeLanguage(){
-    const languages = ["en","am","ru"]
+    const languages = ["en","am","es"]
     const params = new URLSearchParams(window.location.search);
     let lang = params.get("lang") || "en";
     if(!languages.includes(lang)){
